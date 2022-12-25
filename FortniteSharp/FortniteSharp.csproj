@@ -41,16 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumsBase.cs" />
+    <Compile Include="Enums\FortniteExecutableTypeEnum.cs" />
+    <Compile Include="Enums\LogMessageImportanceEnum.cs" />
+    <Compile Include="Enums\LogMessageSourceEnum.cs" />
+    <Compile Include="Helpers\BuildsHelper.cs" />
+    <Compile Include="Helpers\ProcessHelper.cs" />
+    <Compile Include="Internal\Strings.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StructsBase.cs" />
+    <Compile Include="Structs\LaunchFortniteStruct.cs" />
+    <Compile Include="Structs\SSLBypassStruct.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enums\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Internal\" />
+    <Folder Include="Launcher\" />
     <Folder Include="Patchers\" />
-    <Folder Include="Structs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

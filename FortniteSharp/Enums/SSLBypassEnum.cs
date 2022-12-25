@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FortniteSharp
+namespace FortniteSharp.Enums
 {
-    public class Enums
+    public enum SSLByapssMode
     {
+        Manual,
+        DLL
     }
 }
