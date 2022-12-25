@@ -10,7 +10,7 @@ namespace FortniteSharp.Helpers
 {
     public class BuildsHelper
     {
-        public static bool IsPathValid(string Path, bool AlsoCheckForFortniteLauncherEXE)
+        public static bool IsPathValid(string Path, bool AlsoCheckForFortniteLauncherEXE = false)
         {
             if (File.Exists(Path + Strings.Fortnite64ShippingExecutablePath))
             {
