@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic.cs" />
     <Compile Include="Enums\FortniteExecutableTypeEnum.cs" />
     <Compile Include="Enums\LogMessageImportanceEnum.cs" />
     <Compile Include="Enums\LogMessageSourceEnum.cs" />

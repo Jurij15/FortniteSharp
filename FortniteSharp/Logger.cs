@@ -44,6 +44,9 @@ namespace FortniteSharp
                 case LogMessageSource.SSLByapss:
                     Console.WriteLine(LogMessage + "[SSL]" + Message);
                     break;
+                case LogMessageSource.None:
+                    Console.WriteLine(LogMessage + Message); 
+                    break;
                 default:
                     break;
             }

@@ -6,6 +6,11 @@ string Path = string.Empty;
 string Args = string.Empty;
 string SSLBypassDLLPath = string.Empty;
 
+Basic.PrintFortniteSharpInfo();
+
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
 //get user variables
 Console.WriteLine("Testing launcher for FortniteSharp");
 Console.WriteLine("Enter the path to your Fortnite installation (the folder should contain the FortniteGame and Engine folders!)");
@@ -22,5 +27,7 @@ Params.UseShellExecute = false;
 Params.LaunchArguments= Args;
 
 Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
+
+Basic.PrintFortniteSharpInfo();
 
 Console.ReadLine();

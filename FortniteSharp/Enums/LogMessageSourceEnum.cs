@@ -11,5 +11,6 @@ namespace FortniteSharp.Enums
     {
         Launcher,
         SSLByapss,
+        None,
     }
 }
