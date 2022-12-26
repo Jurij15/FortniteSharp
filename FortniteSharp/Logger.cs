@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FortniteSharp
 {
-    public static class Logger
+    internal class Logger
     {
         public static void Log(LogMessageImportance Importance, LogMessageSource Source, string Message)
         {
@@ -39,10 +39,10 @@ namespace FortniteSharp
             switch (Source)
             {
                 case LogMessageSource.Launcher:
-                    Console.Write(LogMessage + "[Launcher]" + Message);
+                    Console.WriteLine(LogMessage + "[Launcher]" + Message);
                     break;
                 case LogMessageSource.SSLByapss:
-                    Console.Write(LogMessage + "[SSL]" + Message);
+                    Console.WriteLine(LogMessage + "[SSL]" + Message);
                     break;
                 default:
                     break;

@@ -18,6 +18,6 @@ namespace FortniteSharp.Internal
 
         public static readonly string FortniteSplashImage = @"\FortniteGame\Content\Splash\Splash.bmp";
 
-        public static readonly string DefaultLaunchArguments = "-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -nobe -fromfl=eac -fltoken=3db3ba5dcbd2e16703f3978d -caldera={} -AUTH_LOGIN=player@projectreboot.dev -AUTH_PASSWORD=Rebooted -AUTH_TYPE=epic";
+        public static readonly string DefaultLaunchArguments = "-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -nobe -fromfl=eac -fltoken=3db3ba5dcbd2e16703f3978d -caldera={} -AUTH_LOGIN=player@fortnite.dev -AUTH_PASSWORD=Password -AUTH_TYPE=epic";
     }
 }

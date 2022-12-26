@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortniteSharp", "FortniteSharp\FortniteSharp.csproj", "{982B544D-1C9F-4B35-9C72-7D8BF2F8EA56}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A54E33BA-099F-413B-BE9D-7A61FA3D6FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLauncher", "TestLauncher\TestLauncher.csproj", "{98D71C0D-21F0-44A6-8BA2-7D6CD7A0E206}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{982B544D-1C9F-4B35-9C72-7D8BF2F8EA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{982B544D-1C9F-4B35-9C72-7D8BF2F8EA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{982B544D-1C9F-4B35-9C72-7D8BF2F8EA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98D71C0D-21F0-44A6-8BA2-7D6CD7A0E206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98D71C0D-21F0-44A6-8BA2-7D6CD7A0E206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98D71C0D-21F0-44A6-8BA2-7D6CD7A0E206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98D71C0D-21F0-44A6-8BA2-7D6CD7A0E206}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98D71C0D-21F0-44A6-8BA2-7D6CD7A0E206} = {A54E33BA-099F-413B-BE9D-7A61FA3D6FF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07456759-365C-4B97-8D9E-4BE29F8D6721}

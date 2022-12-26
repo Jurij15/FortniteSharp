@@ -10,34 +10,25 @@ namespace FortniteSharp.Helpers
 {
     public class BuildsHelper
     {
-        public static bool IsPathValid(string Path, bool AlsoCheckForFortniteLauncherEXE = false)
+        public static bool IsPathValid(string Path, bool AlsoCheckForFortniteEACEXE = false)
         {
             if (File.Exists(Path + Strings.Fortnite64ShippingExecutablePath))
             {
                 if (File.Exists(Path + Strings.Fortnite64ShippingBattleEyeExecutablePath))
                 {
-                    if (File.Exists(Path + Strings.Fortnite64ShippingEACExecutablePath))
+                    if (AlsoCheckForFortniteEACEXE)
                     {
-                        if (AlsoCheckForFortniteLauncherEXE)
-                        {
-                            if (File.Exists(Path + Strings.FortniteLauncherExecutablePath))
-                            {
-                                return true;
-                            }
-                            else if (!File.Exists(Path + Strings.FortniteLauncherExecutablePath))
-                            {
-                                return false;
-                            }
-                        }
-                        else if (!AlsoCheckForFortniteLauncherEXE)
+                        if (File.Exists(Path+ Strings.Fortnite64ShippingEACExecutablePath))
                         {
                             return true;
                         }
+                        else if (!File.Exists(Path + Strings.Fortnite64ShippingEACExecutablePath))
+                        {
+                            return false;
+                        }
                     }
-                    else if (!File.Exists(Path + Strings.Fortnite64ShippingEACExecutablePath))
-                    {
-                        return false;
-                    }
+
+                    return true;
                 }
                 else if (!File.Exists(Path + Strings.Fortnite64ShippingBattleEyeExecutablePath))
                 {
@@ -45,6 +36,20 @@ namespace FortniteSharp.Helpers
                 }
             }
             else if (!File.Exists(Path + Strings.Fortnite64ShippingExecutablePath))
+            {
+                return false;
+            }
+
+            return false;
+        }
+
+        public static bool DoesEACExecutableExist(string ValidPath) //i have to do this because some older builds do not contain the eac executable
+        {
+            if (File.Exists(ValidPath + Strings.Fortnite64ShippingEACExecutablePath))
+            {
+                return true;
+            }
+            else if (!File.Exists(ValidPath + Strings.Fortnite64ShippingEACExecutablePath))
             {
                 return false;
             }
