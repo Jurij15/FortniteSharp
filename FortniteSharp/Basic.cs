@@ -10,6 +10,9 @@ namespace FortniteSharp
 {
     public class Basic
     {
+        /// <summary>
+        /// Prints basic info about FortniteSharp to Console
+        /// </summary>
         public static void PrintFortniteSharpInfo()
         { 
             Logger.Log(Enums.LogMessageImportance.Information, Enums.LogMessageSource.None, "FortniteSharp");

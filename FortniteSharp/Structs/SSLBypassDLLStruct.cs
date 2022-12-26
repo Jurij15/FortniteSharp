@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FortniteSharp.Structs
 {
+    /// <summary>
+    /// Parameters for injecting the SSL bypass DLL
+    /// </summary>
     public struct SSLBypassDLLParams
     {
         public string SSLBypassDLLLocation;

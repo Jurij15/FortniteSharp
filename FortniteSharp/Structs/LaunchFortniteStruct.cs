@@ -8,10 +8,13 @@ using System.Threading.Tasks;
 
 namespace FortniteSharp.Structs
 {
+    /// <summary>
+    /// Parameters for launching Fortnite
+    /// </summary>
     public struct LaunchFortnite_Params
     {
-        public string ValidPath;
-        public string LaunchArguments;
+        public string ValidPath; //a Valid path
+        public string LaunchArguments; //arguments to use when launching (will be default if empty/null)
         public bool UseShellExecute; //kinda useless but why not
     }
 }

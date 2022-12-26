@@ -13,6 +13,12 @@ namespace FortniteSharp.Launcher
 {
     public class Launcher
     {
+        /// <summary>
+        /// Launches Fortnite based on the parameters provided
+        /// </summary>
+        /// <param name="Executable">Type of the executable that will be launched</param>
+        /// <param name="Params">Parameters about launching</param>
+        /// <returns>Fortnite Process</returns>
         public static Process Start(FortniteExecutableType Executable, LaunchFortnite_Params Params)
         {
             Process p = new Process();

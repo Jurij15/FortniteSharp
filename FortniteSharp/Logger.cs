@@ -11,6 +11,12 @@ namespace FortniteSharp
 {
     internal class Logger
     {
+        /// <summary>
+        /// Logs the provided message
+        /// </summary>
+        /// <param name="Importance">How important is the message</param>
+        /// <param name="Source">Where is the message coming from</param>
+        /// <param name="Message">The actuall message</param>
         public static void Log(LogMessageImportance Importance, LogMessageSource Source, string Message)
         {
             string LogMessage = string.Empty;

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace FortniteSharp.Enums
 {
+    /// <summary>
+    /// Source of the log message
+    /// </summary>
     public enum LogMessageSource : int
     {
         Launcher,
