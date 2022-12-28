@@ -19,18 +19,24 @@ Console.WriteLine("Enter the path to the ssl bypass dll to use (will not be used
 SSLBypassDLLPath = Console.ReadLine();
 
 //the actuall launch procedure
-LaunchFortnite_Params Params= new LaunchFortnite_Params();
-Params.ValidPath = Path;
-Params.UseShellExecute = false;
-Params.LaunchArguments= Args;
+LaunchFortnite_Params Params= new LaunchFortnite_Params(); //create the params variable
+Params.ValidPath = Path; //path that we got from the user
+Params.SuspendOnStart = false; //the process will not get suspended on startup
+Params.LaunchArguments= Args; //arguments to launch it
 
-FN = Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
+FN = Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params); //start the process and assign it to the FN variable
 
-SSLBypassDLLParams SParams = new SSLBypassDLLParams();
-SParams.ProcessID = FN.Id;
-SParams.SSLBypassDLLLocation = SSLBypassDLLPath;
+/*
+ * What is FortniteExecutableType?
+ * It tells the launcher if the launched process is EAC or BE or just normal Fornite
+ * if it is EAC or BE, SuspendOnStart will be automatically true
+ * */
 
-SSLPatcher.PatchWithDLL(SParams);
+SSLBypassDLLParams SParams = new SSLBypassDLLParams(); //create the SParams variable
+SParams.ProcessID = FN.Id; //fortnite process id
+SParams.SSLBypassDLLLocation = SSLBypassDLLPath; //path to the dll that will be used to bypass ssl
+
+SSLPatcher.PatchWithDLL(SParams); //patch SSL
 
 Basic.PrintFortniteSharpInfo();
 

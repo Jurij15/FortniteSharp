@@ -18,7 +18,7 @@ namespace FortniteSharp.Patchers
         public static void PatchWithDLL(SSLBypassDLLParams Params)
         {
             Injector.InjectDll(Params.ProcessID, Params.SSLBypassDLLLocation);
-            Logger.Log(Enums.LogMessageImportance.Success, Enums.LogMessageSource.SSLByapss, "Patched SSL!");
+            Logger.Log(Enums.LogMessageImportance.Success, Enums.LogMessageSource.SSLByapss, "Injected SSL bypass DLL!");
         }
 
         /// <summary>

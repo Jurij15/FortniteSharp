@@ -15,6 +15,6 @@ namespace FortniteSharp.Structs
     {
         public string ValidPath; //a Valid path
         public string LaunchArguments; //arguments to use when launching (will be default if empty/null)
-        public bool UseShellExecute; //kinda useless but why not
+        public bool SuspendOnStart; //this is meant mostly for EAC and BE, will stop the process after it is started
     }
 }
