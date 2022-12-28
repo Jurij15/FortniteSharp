@@ -15,6 +15,16 @@ Params.ValidPath = /*Path to the folder that contains the FortniteGame and Engin
 Params.SuspendOnStart = false; //the process will not get suspended on startup
 Params.LaunchArguments= /*if you need, custom launch arguments*/;
 
+/*
+ * What is FortniteExecutableType?
+ * It tells the launcher if the launched process is EAC or BE or just normal Fornite
+ * if it is EAC or BE, SuspendOnStart will be automatically true
+
+SSLBypassDLLParams SParams = new SSLBypassDLLParams(); //create the SParams variable
+SParams.ProcessID = FN.Id; //fortnite process id
+SParams.SSLBypassDLLLocation = SSLBypassDLLPath; //path to the dll that will be used to bypass ssl
+*/
+
 Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params); //start the process
 ```
 
