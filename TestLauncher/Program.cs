@@ -26,6 +26,12 @@ Params.LaunchArguments= Args;
 
 FN = Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
 
+SSLBypassDLLParams SParams = new SSLBypassDLLParams();
+SParams.ProcessID = FN.Id;
+SParams.SSLBypassDLLLocation = SSLBypassDLLPath;
+
+SSLPatcher.PatchWithDLL(SParams);
+
 Basic.PrintFortniteSharpInfo();
 
 ///Console.ReadLine();
