@@ -2,7 +2,7 @@
 A simple tool to help making custom launchers for Fortnite easiser
 
 # Usage
--You can check out the TestLauncher for an example on how to use this tool
+- You can check out the TestLauncher for an example on how to use this tool
 ## Without SSL Bypass
 ```
 using FortniteSharp;
