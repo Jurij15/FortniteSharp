@@ -20,4 +20,23 @@ namespace FortniteSharp.Internal
 
         public static readonly string DefaultLaunchArguments = "-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -nobe -fromfl=eac -fltoken=3db3ba5dcbd2e16703f3978d -caldera={} -AUTH_LOGIN=player@fortnite.dev -AUTH_PASSWORD=Password -AUTH_TYPE=epic";
     }
+
+    internal sealed class Patches
+    {
+        public static readonly byte[] _verifyPeerPatched69 = new byte[] //s6 - 9.10
+{
+            65,
+            57,
+            40,
+            176,
+            0,
+            144,
+            136,
+            131,
+            80,
+            4,
+            0,
+            0
+};
+    }
 }

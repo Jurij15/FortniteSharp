@@ -1,10 +1,13 @@
 ﻿using FortniteSharp;
 using FortniteSharp.Launcher;
+using FortniteSharp.Patchers;
 using FortniteSharp.Structs;
+using System.Diagnostics;
 
 string Path = string.Empty;
 string Args = string.Empty;
 string SSLBypassDLLPath = string.Empty;
+Process FN;
 
 //get user variables
 Console.WriteLine("Testing launcher for FortniteSharp");
@@ -21,8 +24,10 @@ Params.ValidPath = Path;
 Params.UseShellExecute = false;
 Params.LaunchArguments= Args;
 
-Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
+FN = Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
 
 Basic.PrintFortniteSharpInfo();
 
-Console.ReadLine();
+///Console.ReadLine();
+
+FN.WaitForExit();
