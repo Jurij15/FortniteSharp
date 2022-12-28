@@ -1,7 +1,7 @@
 ﻿using FortniteSharp;
 using FortniteSharp.Launcher;
-using FortniteSharp.Patchers;
 using FortniteSharp.Structs;
+using FortniteSharp.Patchers;
 using System.Diagnostics;
 
 string Path = string.Empty;
