@@ -9,12 +9,13 @@ using FortniteSharp;
 using FortniteSharp.Launcher;
 using FortniteSharp.Structs;
 
-LaunchFortnite_Params Params= new LaunchFortnite_Params();
+//the actuall launch procedure
+LaunchFortnite_Params Params= new LaunchFortnite_Params(); //create the params variable
 Params.ValidPath = /*Path to the folder that contains the FortniteGame and Engine folders*/;
-Params.UseShellExecute = false;
+Params.SuspendOnStart = false; //the process will not get suspended on startup
 Params.LaunchArguments= /*if you need, custom launch arguments*/;
 
-Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
+Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params); //start the process
 ```
 
 ## With SSL Bypass
@@ -25,16 +26,17 @@ using FortniteSharp.Launcher;
 using FortniteSharp.Structs;
 using FortniteSharp.Patchers;
 
-LaunchFortnite_Params Params= new LaunchFortnite_Params();
+//the actuall launch procedure
+LaunchFortnite_Params Params= new LaunchFortnite_Params(); //create the params variable
 Params.ValidPath = /*Path to the folder that contains the FortniteGame and Engine folders*/;
-Params.UseShellExecute = false;
+Params.SuspendOnStart = false; //the process will not get suspended on startup
 Params.LaunchArguments= /*if you need, custom launch arguments*/;
 
-Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
+Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params); //start the process and assign it to the FN variable
 
-SSLBypassDLLParams SParams = new SSLBypassDLLParams();
-SParams.ProcessID = FN.Id;
-SParams.SSLBypassDLLLocation = SSLBypassDLLPath;
+SSLBypassDLLParams SParams = new SSLBypassDLLParams(); //create the SParams variable
+SParams.ProcessID = //fortnite process id;
+SParams.SSLBypassDLLLocation = //path to the dll that will be used to bypass ssl;
 
-SSLPatcher.PatchWithDLL(SParams);
+SSLPatcher.PatchWithDLL(SParams); //patch SSL
 ```
