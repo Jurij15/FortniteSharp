@@ -58,11 +58,6 @@ namespace FortniteSharp.Launcher
                 Logger.Log(LogMessageImportance.Error, LogMessageSource.Launcher, "Provided path is not valid!");
             }
 
-            if (Params.UseShellExecute == true)
-            {
-                p.StartInfo.UseShellExecute = true;
-            }
-
             if (Params.LaunchArguments != null || Params.LaunchArguments != string.Empty)
             {
                 p.StartInfo.Arguments= Strings.DefaultLaunchArguments;
@@ -72,6 +67,11 @@ namespace FortniteSharp.Launcher
             {
                 p.StartInfo.Arguments = Strings.DefaultLaunchArguments;
                 LaunchArgs = p.StartInfo.Arguments;
+            }
+
+            if (Params.SuspendOnStart)
+            {
+                bSuspendAfterLaunch = true;
             }
 
             if (p.Start())
