@@ -1,8 +1,8 @@
 # FortniteSharp
 A simple tool to help making custom launchers for Fortnite easiser
 
-##Usage
-#Without SSL Bypass
+## Usage
+# Without SSL Bypass
 ```
 using FortniteSharp;
 using FortniteSharp.Launcher;
@@ -14,3 +14,4 @@ Params.UseShellExecute = false;
 Params.LaunchArguments= /*if you need, custom launch arguments*/;
 
 Launcher.Start(FortniteSharp.Enums.FortniteExecutableType.Fortnite64ShippingExecutable, Params);
+```
